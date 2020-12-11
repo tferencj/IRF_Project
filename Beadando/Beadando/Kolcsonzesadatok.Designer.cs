@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.buttonkonyv = new System.Windows.Forms.Button();
-            this.buttonmegse = new System.Windows.Forms.Button();
             this.buttondia = new System.Windows.Forms.Button();
             this.dataGridViewkonyv = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -46,31 +45,20 @@
             // buttonkonyv
             // 
             this.buttonkonyv.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonkonyv.Location = new System.Drawing.Point(627, 215);
+            this.buttonkonyv.Location = new System.Drawing.Point(625, 195);
             this.buttonkonyv.Name = "buttonkonyv";
-            this.buttonkonyv.Size = new System.Drawing.Size(163, 91);
+            this.buttonkonyv.Size = new System.Drawing.Size(163, 73);
             this.buttonkonyv.TabIndex = 2;
             this.buttonkonyv.Text = "Hozzáadás";
             this.buttonkonyv.UseVisualStyleBackColor = true;
             this.buttonkonyv.Click += new System.EventHandler(this.buttonkonyv_Click);
             // 
-            // buttonmegse
-            // 
-            this.buttonmegse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonmegse.Location = new System.Drawing.Point(627, 409);
-            this.buttonmegse.Name = "buttonmegse";
-            this.buttonmegse.Size = new System.Drawing.Size(163, 91);
-            this.buttonmegse.TabIndex = 3;
-            this.buttonmegse.Text = "Mégse";
-            this.buttonmegse.UseVisualStyleBackColor = true;
-            this.buttonmegse.Click += new System.EventHandler(this.buttonmegse_Click);
-            // 
             // buttondia
             // 
             this.buttondia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttondia.Location = new System.Drawing.Point(625, 118);
+            this.buttondia.Location = new System.Drawing.Point(625, 119);
             this.buttondia.Name = "buttondia";
-            this.buttondia.Size = new System.Drawing.Size(163, 91);
+            this.buttondia.Size = new System.Drawing.Size(163, 70);
             this.buttondia.TabIndex = 4;
             this.buttondia.Text = "Diagram";
             this.buttondia.UseVisualStyleBackColor = true;
@@ -84,7 +72,7 @@
             this.dataGridViewkonyv.Name = "dataGridViewkonyv";
             this.dataGridViewkonyv.RowHeadersWidth = 51;
             this.dataGridViewkonyv.RowTemplate.Height = 24;
-            this.dataGridViewkonyv.Size = new System.Drawing.Size(597, 487);
+            this.dataGridViewkonyv.Size = new System.Drawing.Size(597, 425);
             this.dataGridViewkonyv.TabIndex = 7;
             // 
             // textBox1
@@ -122,9 +110,9 @@
             // buttontorol
             // 
             this.buttontorol.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttontorol.Location = new System.Drawing.Point(627, 312);
+            this.buttontorol.Location = new System.Drawing.Point(625, 274);
             this.buttontorol.Name = "buttontorol";
-            this.buttontorol.Size = new System.Drawing.Size(163, 91);
+            this.buttontorol.Size = new System.Drawing.Size(163, 67);
             this.buttontorol.TabIndex = 12;
             this.buttontorol.Text = "Törlés";
             this.buttontorol.UseVisualStyleBackColor = true;
@@ -134,7 +122,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(802, 512);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.buttontorol);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox2);
@@ -142,7 +130,6 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridViewkonyv);
             this.Controls.Add(this.buttondia);
-            this.Controls.Add(this.buttonmegse);
             this.Controls.Add(this.buttonkonyv);
             this.Name = "Kolcsonzesadatok";
             this.Text = "Kolcsonzesadatok";
@@ -156,7 +143,6 @@
         #endregion
 
         private System.Windows.Forms.Button buttonkonyv;
-        private System.Windows.Forms.Button buttonmegse;
         private System.Windows.Forms.Button buttondia;
         private System.Windows.Forms.DataGridView dataGridViewkonyv;
         private System.Windows.Forms.TextBox textBox1;

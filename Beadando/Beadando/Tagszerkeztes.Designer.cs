@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.buttonmegse = new System.Windows.Forms.Button();
             this.buttonveglegesit = new System.Windows.Forms.Button();
             this.dataGridViewkonyv = new System.Windows.Forms.DataGridView();
             this.Nev = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,17 +53,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewkonyv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // buttonmegse
-            // 
-            this.buttonmegse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonmegse.Location = new System.Drawing.Point(625, 347);
-            this.buttonmegse.Name = "buttonmegse";
-            this.buttonmegse.Size = new System.Drawing.Size(163, 91);
-            this.buttonmegse.TabIndex = 4;
-            this.buttonmegse.Text = "Mégse";
-            this.buttonmegse.UseVisualStyleBackColor = true;
-            this.buttonmegse.Click += new System.EventHandler(this.buttonmegse_Click);
             // 
             // buttonveglegesit
             // 
@@ -264,7 +252,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridViewkonyv);
             this.Controls.Add(this.buttonveglegesit);
-            this.Controls.Add(this.buttonmegse);
             this.Name = "Tagszerkeztes";
             this.Text = "Tagszerkeztes";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewkonyv)).EndInit();
@@ -275,8 +262,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button buttonmegse;
         private System.Windows.Forms.Button buttonveglegesit;
         private System.Windows.Forms.DataGridView dataGridViewkonyv;
         private System.Windows.Forms.Label label1;

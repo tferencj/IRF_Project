@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Beadando
 {
-    public partial class Konyvszerkeztes : Form
+    public partial class Konyvszerkeztes : _Form
     {
         IRF_databaseEntities context = new IRF_databaseEntities();
 

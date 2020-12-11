@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Beadando
 {
-    public partial class Tagszerkeztes : Form
+    public partial class Tagszerkeztes : _Form
     { //_form
         IRF_databaseEntities context = new IRF_databaseEntities();
         public Tagszerkeztes()
@@ -23,8 +23,8 @@ namespace Beadando
         {
             Tagadatok t = new Tagadatok();
             t.Show();
-            this.Close();
         }
+
         private void taglistazas()
         {
             dataGridViewkonyv.Controls.Clear();

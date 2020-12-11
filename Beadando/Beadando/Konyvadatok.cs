@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Beadando
 {
-    public partial class Konyvadatok : Form
+    public partial class Konyvadatok : _Form
     {
         IRF_databaseEntities context = new IRF_databaseEntities();
 

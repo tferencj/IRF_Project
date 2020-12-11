@@ -14,9 +14,9 @@ namespace Beadando
     {
         public _Form()
         {
-            //beírom a mégse vagy bezár gombot, csak csináljam meg külön osztályban a mégsét
-            Torolgomb megsebutton = new Torolgomb();
             InitializeComponent();
+            Megsegomb megsebutton = new Megsegomb();
+            Controls.Add(megsebutton);            
         }
     }
 }
