@@ -12,7 +12,7 @@ namespace Beadando
 {
     public partial class Tagadatok : _Form
     {
-        IRF_databaseEntities context = new IRF_databaseEntities();
+        IRF_databaseEntitiesuj context = new IRF_databaseEntitiesuj();
 
         public Tagadatok()
         {

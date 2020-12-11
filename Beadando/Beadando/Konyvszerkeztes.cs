@@ -13,7 +13,7 @@ namespace Beadando
 {
     public partial class Konyvszerkeztes : _Form
     {
-        IRF_databaseEntities context = new IRF_databaseEntities();
+        IRF_databaseEntitiesuj context = new IRF_databaseEntitiesuj();
 
         public Konyvszerkeztes()
         {

@@ -12,7 +12,7 @@ namespace Beadando
 {
     public partial class Kolcsonzes : _Form
     {
-        IRF_databaseEntities context= new IRF_databaseEntities();
+        IRF_databaseEntitiesuj context= new IRF_databaseEntitiesuj();
         public Kolcsonzes()
         {
             InitializeComponent();
@@ -32,6 +32,7 @@ namespace Beadando
             k.Konyv_ID = ((Konyv)listBoxkonyv.SelectedItem).Konyv_Id;
             k.Szemely_ID = ((Tag)listBoxtag.SelectedItem).tag_Id;
             k.Kivetel_datum = DateTime.Today;
+
         }
 
         private void buttonhozzaad_Click(object sender, EventArgs e)

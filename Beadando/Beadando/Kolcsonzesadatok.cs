@@ -12,12 +12,13 @@ namespace Beadando
 {
     public partial class Kolcsonzesadatok : _Form
     {
-        IRF_databaseEntities context = new IRF_databaseEntities();
+        IRF_databaseEntitiesuj context = new IRF_databaseEntitiesuj();
 
         public Kolcsonzesadatok()
         {
             InitializeComponent();
-            listazas();
+            konyvlistazas();
+            taglistazas();
         }
 
         private void buttonmegse_Click(object sender, EventArgs e)
@@ -33,23 +34,42 @@ namespace Beadando
             k.Show();
             this.Close();
         }
-        private void listazas()
+        private void konyvlistazas()
         {
+            Konyv kolcsonzott = (Konyv)listBoxkonyv.SelectedItem;
 
-            //var t = from x in context.Kolcsonzes
-              //      where x.Konyv_ID==
-                //    select x;
-            //bindingSource1.DataSource = t.ToList();
+            var t = from x in context.Kolcsonzes
+                    where x.Konyv_ID == kolcsonzott.Konyv_Id
+                    select new
+                    {
+                        kolcsonzott.Nev,
+                        kolcsonzott.Szerzo
+                    };
+
+            bindingSource1.DataSource = t.ToList(); // valamiért nem jó
+        }
+
+        private void taglistazas()
+        {
+            Tag kolcsonzo = (Tag)listBoxtag.SelectedItem;
+
+            var t = from x in context.Kolcsonzes
+                    where x.Szemely_ID==kolcsonzo.tag_Id                   
+                    select new
+                    {
+                        kolcsonzo.Nev
+                    };
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            listazas();
+            konyvlistazas();
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            listazas();
+            taglistazas();
         }
 
         private void buttontorol_Click(object sender, EventArgs e)

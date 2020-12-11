@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.buttonmegse = new System.Windows.Forms.Button();
             this.textBoxkonyv = new System.Windows.Forms.TextBox();
             this.textBoxtag = new System.Windows.Forms.TextBox();
@@ -36,6 +37,11 @@
             this.buttonhozzaad = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.torolgomb1 = new Beadando.Torolgomb();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonmegse
@@ -73,7 +79,7 @@
             this.listBoxkonyv.ItemHeight = 16;
             this.listBoxkonyv.Location = new System.Drawing.Point(23, 61);
             this.listBoxkonyv.Name = "listBoxkonyv";
-            this.listBoxkonyv.Size = new System.Drawing.Size(245, 372);
+            this.listBoxkonyv.Size = new System.Drawing.Size(245, 180);
             this.listBoxkonyv.TabIndex = 7;
             // 
             // listBoxtag
@@ -84,13 +90,13 @@
             this.listBoxtag.ItemHeight = 16;
             this.listBoxtag.Location = new System.Drawing.Point(323, 61);
             this.listBoxtag.Name = "listBoxtag";
-            this.listBoxtag.Size = new System.Drawing.Size(245, 372);
+            this.listBoxtag.Size = new System.Drawing.Size(245, 180);
             this.listBoxtag.TabIndex = 8;
             // 
             // buttonhozzaad
             // 
             this.buttonhozzaad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonhozzaad.Location = new System.Drawing.Point(625, 246);
+            this.buttonhozzaad.Location = new System.Drawing.Point(625, 150);
             this.buttonhozzaad.Name = "buttonhozzaad";
             this.buttonhozzaad.Size = new System.Drawing.Size(163, 91);
             this.buttonhozzaad.TabIndex = 9;
@@ -116,11 +122,36 @@
             this.label2.TabIndex = 11;
             this.label2.Text = "Tag";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.DataSource = this.bindingSource1;
+            this.dataGridView1.Location = new System.Drawing.Point(23, 252);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(544, 185);
+            this.dataGridView1.TabIndex = 12;
+            // 
+            // torolgomb1
+            // 
+            this.torolgomb1._grid = this.dataGridView1;
+            this.torolgomb1.Enabled = false;
+            this.torolgomb1.Location = new System.Drawing.Point(625, 252);
+            this.torolgomb1.Name = "torolgomb1";
+            this.torolgomb1.Size = new System.Drawing.Size(162, 89);
+            this.torolgomb1.TabIndex = 13;
+            this.torolgomb1.Text = "Töröl";
+            this.torolgomb1.UseVisualStyleBackColor = true;
+            // 
             // Kolcsonzes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.torolgomb1);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonhozzaad);
@@ -131,6 +162,8 @@
             this.Controls.Add(this.buttonmegse);
             this.Name = "Kolcsonzes";
             this.Text = "Kolcsonzes";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,5 +179,8 @@
         private System.Windows.Forms.Button buttonhozzaad;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private Torolgomb torolgomb1;
     }
 }

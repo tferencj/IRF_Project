@@ -12,7 +12,7 @@ namespace Beadando
 {
     public partial class Tagszerkeztes : _Form
     { //_form
-        IRF_databaseEntities context = new IRF_databaseEntities();
+        IRF_databaseEntitiesuj context = new IRF_databaseEntitiesuj();
         public Tagszerkeztes()
         {
             InitializeComponent();

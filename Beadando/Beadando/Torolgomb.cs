@@ -14,10 +14,9 @@ namespace Beadando
     {
         public Torolgomb()
         {
-            // GRID-et be kell állítani a gombnál
-            this.Text = "Töröl";
             this.Enabled = false;
             InitializeComponent();
+            this.Text = "Töröl";
             this.Click += new System.EventHandler(this.buttontorol_Click);
         }
         public DataGridView _grid { get; set; }
