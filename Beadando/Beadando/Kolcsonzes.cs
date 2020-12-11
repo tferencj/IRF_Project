@@ -1,0 +1,68 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Beadando
+{
+    public partial class Kolcsonzes : _Form
+    {
+        IRF_databaseEntities context= new IRF_databaseEntities();
+        public Kolcsonzes()
+        {
+            InitializeComponent();
+            taglistazas();
+            konyvlistazas();
+        }
+
+        private void buttonmegse_Click(object sender, EventArgs e)
+        {
+            Kolcsonzesadatok k = new Kolcsonzesadatok();
+            k.Show();
+            this.Close();
+        }
+        private void hozzaad()
+        {
+            Kolcsonze k = new Kolcsonze();
+            k.Konyv_ID = ((Konyv)listBoxkonyv.SelectedItem).Konyv_Id;
+            k.Szemely_ID = ((Tag)listBoxtag.SelectedItem).tag_Id;
+            k.Kivetel_datum = DateTime.Today;
+        }
+
+        private void buttonhozzaad_Click(object sender, EventArgs e)
+        {
+            hozzaad();
+        }
+        private void konyvlistazas()
+        {
+            var konyv = from x in context.Konyvs
+                        where x.Nev.Contains(textBoxkonyv.Text)
+                        select x;
+            listBoxkonyv.DataSource = konyv.ToList();
+            listBoxkonyv.DisplayMember = "Nev";
+        }
+        private void taglistazas()
+        {
+            var tag = from x in context.Tags
+                      where x.Nev.Contains(textBoxtag.Text)
+                      select x;
+            listBoxtag.DataSource = tag.ToList();
+            listBoxkonyv.DisplayMember = "Nev";
+        }
+
+        private void textBoxkonyv_TextChanged(object sender, EventArgs e)
+        {
+            konyvlistazas();
+        }
+
+        private void textBoxtag_TextChanged(object sender, EventArgs e)
+        {
+            taglistazas();
+        }
+    }
+}
