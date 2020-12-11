@@ -38,6 +38,7 @@ namespace Beadando
             var t = from x in context.Tags
                     where x.Nev.Contains(textBox1.Text)
                     select x;
+
             bindingSource1.DataSource = t.ToList();
         }
 

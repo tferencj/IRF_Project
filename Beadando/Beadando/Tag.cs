@@ -15,19 +15,17 @@ namespace Beadando
     public partial class Tag
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Tag(DateTime Szuletesi_datum) // ide felsorolni id,nev...
+        public Tag()
         {
-            _Szuletsi_datum = Szuletesi_datum;
             this.Kolcsonzes = new HashSet<Kolcsonze>();
         }
     
-        public int tag_Id { get; }
+        public int tag_Id { get; set; }
         public string Nev { get; set; }
         public System.DateTime Szuletesi_datum { get; set; }
-        private System.DateTime _Szuletsi_datum;
         public string Cim { get; set; }
         public System.DateTime Belepesi_datum { get; set; }
-        public Nullable<System.DateTime> Kilepesi_datum { get; set; } // set-ben kisebb legyen mint belepesi datum vagy hiba
+        public Nullable<System.DateTime> Kilepesi_datum { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Kolcsonze> Kolcsonzes { get; set; }

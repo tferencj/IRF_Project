@@ -13,10 +13,10 @@ namespace Beadando
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class IRF_databaseEntities : DbContext
+    public partial class IRF_databaseEntitiesuj : DbContext
     {
-        public IRF_databaseEntities()
-            : base("name=IRF_databaseEntities")
+        public IRF_databaseEntitiesuj()
+            : base("name=IRF_databaseEntitiesuj")
         {
         }
     
@@ -25,7 +25,7 @@ namespace Beadando
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Kolcsonzes> Kolcsonzes { get; set; }
+        public virtual DbSet<Kolcsonze> Kolcsonzes { get; set; }
         public virtual DbSet<Konyv> Konyvs { get; set; }
         public virtual DbSet<Tag> Tags { get; set; }
     }

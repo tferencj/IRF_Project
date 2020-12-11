@@ -41,7 +41,8 @@ namespace Beadando
         }
         private void taghozzaadas()
         {
-            Tag tag= new Tag(DateTime.Now); // ez a születési dátum, de a belépésihez kell
+            Tag tag = new Tag();//textBoxnev.Text, Convert.ToDateTime(textBoxszuletes.Text), textBoxcim.Text, DateTime.Now); // ez a születési dátum, de a belépésihez kell
+
             tag.Nev = textBoxnev.Text;
             tag.Szuletesi_datum = Convert.ToDateTime(textBoxszuletes.Text);
             tag.Cim = textBoxcim.Text;
