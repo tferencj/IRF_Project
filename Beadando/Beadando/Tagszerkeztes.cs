@@ -17,6 +17,7 @@ namespace Beadando
         {
             InitializeComponent();
             taglistazas();
+            buttontorol.Visible = false;
         }
 
         private void buttonmegse_Click(object sender, EventArgs e)
@@ -41,12 +42,14 @@ namespace Beadando
         }
         private void taghozzaadas()
         {
-            Tag tag = new Tag();//textBoxnev.Text, Convert.ToDateTime(textBoxszuletes.Text), textBoxcim.Text, DateTime.Now); // ez a születési dátum, de a belépésihez kell
+            Tag tag = new Tag();
+            //textBoxnev.Text, Convert.ToDateTime(textBoxszuletes.Text), textBoxcim.Text, DateTime.Now); 
+            // ez a születési dátum, de a belépésihez kell
 
             tag.Nev = textBoxnev.Text;
             tag.Szuletesi_datum = Convert.ToDateTime(textBoxszuletes.Text);
             tag.Cim = textBoxcim.Text;
-            tag.Belepesi_datum = Convert.ToDateTime(textBoxbelepes.Text);
+            tag.Belepesi_datum = Convert.ToDateTime(textBoxbelepes.Text);            
             tag.Kilepesi_datum = Convert.ToDateTime(textBoxkilepes.Text);
 
             bindingSource1.Add(tag);
@@ -75,9 +78,23 @@ namespace Beadando
 
         private void dataGridViewkonyv_SelectionChanged(object sender, EventArgs e)
         {
+
+            if (dataGridViewkonyv.CurrentRow.Cells["Kilepesi_datum"].Value != null)
+            {
+                buttontorol.Visible = true;
+            }
+            else
+            {
+                buttontorol.Visible = false;
+            }
+            
             // törölgombot hozza fel, enable true-ra kell
             // ha kölcsönzött már könyvet akkor ne lehessen törölni
         }
-        // kódból mégse vagy bezár gomb,felrakom a gombot, létrehozok egy eseményt, hiba, lemásolom
+
+        private void buttonkilep_Click(object sender, EventArgs e)
+        {
+            // kiléptetni
+        }
     }
 }

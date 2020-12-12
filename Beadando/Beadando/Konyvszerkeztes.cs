@@ -75,5 +75,15 @@ namespace Beadando
         {
             konyvhozzaadas();
         }
+
+        private void dataGridViewkonyv_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // véletlen
+        }
+
+        private void dataGridViewkonyv_SelectionChanged(object sender, EventArgs e)
+        {
+            // hülyeség
+        }
     }
 }

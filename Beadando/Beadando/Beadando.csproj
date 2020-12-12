@@ -144,6 +144,12 @@
     <Compile Include="Tagadatok.Designer.cs">
       <DependentUpon>Tagadatok.cs</DependentUpon>
     </Compile>
+    <Compile Include="tagkilep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tagkilep.Designer.cs">
+      <DependentUpon>tagkilep.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tagszerkeztes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +194,9 @@
     </Compile>
     <EmbeddedResource Include="Tagadatok.resx">
       <DependentUpon>Tagadatok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tagkilep.resx">
+      <DependentUpon>tagkilep.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tagszerkeztes.resx">
       <DependentUpon>Tagszerkeztes.cs</DependentUpon>

@@ -97,6 +97,8 @@
             this.dataGridViewkonyv.RowTemplate.Height = 24;
             this.dataGridViewkonyv.Size = new System.Drawing.Size(599, 232);
             this.dataGridViewkonyv.TabIndex = 9;
+            this.dataGridViewkonyv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewkonyv_CellContentClick);
+            this.dataGridViewkonyv.SelectionChanged += new System.EventHandler(this.dataGridViewkonyv_SelectionChanged);
             // 
             // Nev
             // 

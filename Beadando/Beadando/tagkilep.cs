@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace Beadando
 {
-    public partial class _Form : Form
+    public partial class tagkilep : _Form
     {
-        public _Form()
+        public tagkilep()
         {
             InitializeComponent();
-            Megsegomb megsebutton = new Megsegomb();
-            Controls.Add(megsebutton);
         }
     }
 }

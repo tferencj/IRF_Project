@@ -46,10 +46,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.textBoxcim = new System.Windows.Forms.TextBox();
             this.textBoxbelepes = new System.Windows.Forms.TextBox();
-            this.textBoxkilepes = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.buttontorol = new System.Windows.Forms.Button();
+            this.buttonkilep = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewkonyv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
@@ -191,35 +190,19 @@
             // 
             // textBoxbelepes
             // 
-            this.textBoxbelepes.Location = new System.Drawing.Point(214, 353);
+            this.textBoxbelepes.Location = new System.Drawing.Point(314, 353);
             this.textBoxbelepes.Name = "textBoxbelepes";
             this.textBoxbelepes.Size = new System.Drawing.Size(171, 22);
             this.textBoxbelepes.TabIndex = 24;
             // 
-            // textBoxkilepes
-            // 
-            this.textBoxkilepes.Location = new System.Drawing.Point(419, 353);
-            this.textBoxkilepes.Name = "textBoxkilepes";
-            this.textBoxkilepes.Size = new System.Drawing.Size(171, 22);
-            this.textBoxkilepes.TabIndex = 25;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(211, 333);
+            this.label5.Location = new System.Drawing.Point(311, 333);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(105, 17);
             this.label5.TabIndex = 26;
             this.label5.Text = "Belépési dátum";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(416, 333);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(100, 17);
-            this.label6.TabIndex = 27;
-            this.label6.Text = "Kilépési dátum";
             // 
             // buttontorol
             // 
@@ -232,15 +215,25 @@
             this.buttontorol.UseVisualStyleBackColor = true;
             this.buttontorol.Click += new System.EventHandler(this.buttontorol_Click);
             // 
+            // buttonkilep
+            // 
+            this.buttonkilep.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonkilep.Location = new System.Drawing.Point(625, 56);
+            this.buttonkilep.Name = "buttonkilep";
+            this.buttonkilep.Size = new System.Drawing.Size(163, 91);
+            this.buttonkilep.TabIndex = 29;
+            this.buttonkilep.Text = "Kiléptetés";
+            this.buttonkilep.UseVisualStyleBackColor = true;
+            this.buttonkilep.Click += new System.EventHandler(this.buttonkilep_Click);
+            // 
             // Tagszerkeztes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonkilep);
             this.Controls.Add(this.buttontorol);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBoxkilepes);
             this.Controls.Add(this.textBoxbelepes);
             this.Controls.Add(this.textBoxcim);
             this.Controls.Add(this.label4);
@@ -273,9 +266,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBoxcim;
         private System.Windows.Forms.TextBox textBoxbelepes;
-        private System.Windows.Forms.TextBox textBoxkilepes;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Button buttontorol;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nev;
@@ -283,5 +274,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Cim;
         private System.Windows.Forms.DataGridViewTextBoxColumn Belepesi_datum;
         private System.Windows.Forms.DataGridViewTextBoxColumn Kilepesi_datum;
+        private System.Windows.Forms.Button buttonkilep;
     }
 }
