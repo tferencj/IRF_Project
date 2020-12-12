@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace Beadando
 {
     public partial class Tagszerkeztes : _Form
-    { //_form
+    { 
         IRF_databaseEntitiesuj context = new IRF_databaseEntitiesuj();
         public Tagszerkeztes()
         {
@@ -92,7 +92,8 @@ namespace Beadando
 
         private void buttonkilep_Click(object sender, EventArgs e)
         {
-            // kiléptetni
+            tagkilep t = new tagkilep();
+            t.Show();
         }
     }
 }
