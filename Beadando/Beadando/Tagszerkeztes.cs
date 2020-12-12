@@ -50,7 +50,6 @@ namespace Beadando
             tag.Szuletesi_datum = Convert.ToDateTime(textBoxszuletes.Text);
             tag.Cim = textBoxcim.Text;
             tag.Belepesi_datum = Convert.ToDateTime(textBoxbelepes.Text);            
-            tag.Kilepesi_datum = Convert.ToDateTime(textBoxkilepes.Text);
 
             bindingSource1.Add(tag);
 
@@ -60,7 +59,6 @@ namespace Beadando
             textBoxszuletes.Clear();
             textBoxcim.Clear();
             textBoxbelepes.Clear();
-            textBoxkilepes.Clear();
 
             dataGridViewkonyv.Refresh();
         }
