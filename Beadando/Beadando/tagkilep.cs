@@ -12,27 +12,11 @@ namespace Beadando
 {
     public partial class tagkilep : _Form
     {
-        IRF_databaseEntitiesuj context = new IRF_databaseEntitiesuj();
+        IRF_databaseEntitiesP context = new IRF_databaseEntitiesP();
         public tagkilep()
         {
             InitializeComponent();
             taglistazas();
-            string torlendo = "Jan 1, 2009";
-            torlendo = dataGridViewkonyv.CurrentRow.Cells["Kilepesi_datum"].Value.ToString();
-            var torol = DateTime.Parse(torlendo);
-        }
-        private DateTime _kilepes;
-        public DateTime kilepes
-        {
-            get { return _kilepes; }
-            set
-            {
-                _kilepes = kilepes;
-                if (/*_kilepes<torol*/)
-                {
-
-                }
-            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -51,7 +35,7 @@ namespace Beadando
 
         private void buttonkilep_Click(object sender, EventArgs e)
         {
-
+            context.SaveChanges();
         }
     }
 }

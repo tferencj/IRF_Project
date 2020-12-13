@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="IRF_databaseModelP.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Kolcsonzes">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Konyv_ID" Type="int" Nullable="false" />
+          <Property Name="Szemely_ID" Type="int" Nullable="false" />
+          <Property Name="Kivetel_datum" Type="date" Nullable="false" />
+          <Property Name="Visszahozas_datum" Type="date" />
+        </EntityType>
+        <EntityType Name="Konyv">
+          <Key>
+            <PropertyRef Name="Konyv_Id" />
+          </Key>
+          <Property Name="Konyv_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nev" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Szerzo" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Kiadas_datum" Type="int" Nullable="false" />
+          <Property Name="Kiado" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Nyelv" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Oldalszam" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Tag">
+          <Key>
+            <PropertyRef Name="tag_Id" />
+          </Key>
+          <Property Name="tag_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nev" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Szuletesi_datum" Type="date" Nullable="false" />
+          <Property Name="Cim" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Belepesi_datum" Type="date" Nullable="false" />
+          <Property Name="Kilepesi_datum" Type="date" />
+        </EntityType>
+        <Association Name="FK_Kolcsonzes_ToKonyv">
+          <End Role="Konyv" Type="Self.Konyv" Multiplicity="1" />
+          <End Role="Kolcsonzes" Type="Self.Kolcsonzes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Konyv">
+              <PropertyRef Name="Konyv_Id" />
+            </Principal>
+            <Dependent Role="Kolcsonzes">
+              <PropertyRef Name="Konyv_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Kolcsonzes_ToTag">
+          <End Role="Tag" Type="Self.Tag" Multiplicity="1" />
+          <End Role="Kolcsonzes" Type="Self.Kolcsonzes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tag">
+              <PropertyRef Name="tag_Id" />
+            </Principal>
+            <Dependent Role="Kolcsonzes">
+              <PropertyRef Name="Szemely_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="IRF_databaseModelPStoreContainer">
+          <EntitySet Name="Kolcsonzes" EntityType="Self.Kolcsonzes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Konyv" EntityType="Self.Konyv" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tag" EntityType="Self.Tag" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Kolcsonzes_ToKonyv" Association="Self.FK_Kolcsonzes_ToKonyv">
+            <End Role="Konyv" EntitySet="Konyv" />
+            <End Role="Kolcsonzes" EntitySet="Kolcsonzes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Kolcsonzes_ToTag" Association="Self.FK_Kolcsonzes_ToTag">
+            <End Role="Tag" EntitySet="Tag" />
+            <End Role="Kolcsonzes" EntitySet="Kolcsonzes" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="IRF_databaseModelP" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Kolcsonze">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Konyv_ID" Type="Int32" Nullable="false" />
+          <Property Name="Szemely_ID" Type="Int32" Nullable="false" />
+          <Property Name="Kivetel_datum" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Visszahozas_datum" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="Konyv" Relationship="Self.FK_Kolcsonzes_ToKonyv" FromRole="Kolcsonzes" ToRole="Konyv" />
+          <NavigationProperty Name="Tag" Relationship="Self.FK_Kolcsonzes_ToTag" FromRole="Kolcsonzes" ToRole="Tag" />
+        </EntityType>
+        <EntityType Name="Konyv">
+          <Key>
+            <PropertyRef Name="Konyv_Id" />
+          </Key>
+          <Property Name="Konyv_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nev" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Szerzo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Kiadas_datum" Type="Int32" Nullable="false" />
+          <Property Name="Kiado" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Nyelv" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Oldalszam" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Kolcsonzes" Relationship="Self.FK_Kolcsonzes_ToKonyv" FromRole="Konyv" ToRole="Kolcsonzes" />
+        </EntityType>
+        <EntityType Name="Tag">
+          <Key>
+            <PropertyRef Name="tag_Id" />
+          </Key>
+          <Property Name="tag_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nev" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Szuletesi_datum" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Cim" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Belepesi_datum" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Kilepesi_datum" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="Kolcsonzes" Relationship="Self.FK_Kolcsonzes_ToTag" FromRole="Tag" ToRole="Kolcsonzes" />
+        </EntityType>
+        <Association Name="FK_Kolcsonzes_ToKonyv">
+          <End Role="Konyv" Type="Self.Konyv" Multiplicity="1" />
+          <End Role="Kolcsonzes" Type="Self.Kolcsonze" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Konyv">
+              <PropertyRef Name="Konyv_Id" />
+            </Principal>
+            <Dependent Role="Kolcsonzes">
+              <PropertyRef Name="Konyv_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Kolcsonzes_ToTag">
+          <End Role="Tag" Type="Self.Tag" Multiplicity="1" />
+          <End Role="Kolcsonzes" Type="Self.Kolcsonze" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tag">
+              <PropertyRef Name="tag_Id" />
+            </Principal>
+            <Dependent Role="Kolcsonzes">
+              <PropertyRef Name="Szemely_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="IRF_databaseEntitiesP" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Kolcsonzes" EntityType="Self.Kolcsonze" />
+          <EntitySet Name="Konyvs" EntityType="Self.Konyv" />
+          <EntitySet Name="Tags" EntityType="Self.Tag" />
+          <AssociationSet Name="FK_Kolcsonzes_ToKonyv" Association="Self.FK_Kolcsonzes_ToKonyv">
+            <End Role="Konyv" EntitySet="Konyvs" />
+            <End Role="Kolcsonzes" EntitySet="Kolcsonzes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Kolcsonzes_ToTag" Association="Self.FK_Kolcsonzes_ToTag">
+            <End Role="Tag" EntitySet="Tags" />
+            <End Role="Kolcsonzes" EntitySet="Kolcsonzes" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="IRF_databaseModelPStoreContainer" CdmEntityContainer="IRF_databaseEntitiesP">
+          <EntitySetMapping Name="Kolcsonzes">
+            <EntityTypeMapping TypeName="IRF_databaseModelP.Kolcsonze">
+              <MappingFragment StoreEntitySet="Kolcsonzes">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Konyv_ID" ColumnName="Konyv_ID" />
+                <ScalarProperty Name="Szemely_ID" ColumnName="Szemely_ID" />
+                <ScalarProperty Name="Kivetel_datum" ColumnName="Kivetel_datum" />
+                <ScalarProperty Name="Visszahozas_datum" ColumnName="Visszahozas_datum" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Konyvs">
+            <EntityTypeMapping TypeName="IRF_databaseModelP.Konyv">
+              <MappingFragment StoreEntitySet="Konyv">
+                <ScalarProperty Name="Konyv_Id" ColumnName="Konyv_Id" />
+                <ScalarProperty Name="Nev" ColumnName="Nev" />
+                <ScalarProperty Name="Szerzo" ColumnName="Szerzo" />
+                <ScalarProperty Name="Kiadas_datum" ColumnName="Kiadas_datum" />
+                <ScalarProperty Name="Kiado" ColumnName="Kiado" />
+                <ScalarProperty Name="Nyelv" ColumnName="Nyelv" />
+                <ScalarProperty Name="Oldalszam" ColumnName="Oldalszam" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tags">
+            <EntityTypeMapping TypeName="IRF_databaseModelP.Tag">
+              <MappingFragment StoreEntitySet="Tag">
+                <ScalarProperty Name="tag_Id" ColumnName="tag_Id" />
+                <ScalarProperty Name="Nev" ColumnName="Nev" />
+                <ScalarProperty Name="Szuletesi_datum" ColumnName="Szuletesi_datum" />
+                <ScalarProperty Name="Cim" ColumnName="Cim" />
+                <ScalarProperty Name="Belepesi_datum" ColumnName="Belepesi_datum" />
+                <ScalarProperty Name="Kilepesi_datum" ColumnName="Kilepesi_datum" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

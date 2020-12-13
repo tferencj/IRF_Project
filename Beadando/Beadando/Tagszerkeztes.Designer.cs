@@ -267,7 +267,6 @@
         private System.Windows.Forms.TextBox textBoxcim;
         private System.Windows.Forms.TextBox textBoxbelepes;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Button buttontorol;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nev;
         private System.Windows.Forms.DataGridViewTextBoxColumn Szuletesi_datum;
@@ -275,5 +274,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Belepesi_datum;
         private System.Windows.Forms.DataGridViewTextBoxColumn Kilepesi_datum;
         private System.Windows.Forms.Button buttonkilep;
+        public System.Windows.Forms.BindingSource bindingSource1;
     }
 }

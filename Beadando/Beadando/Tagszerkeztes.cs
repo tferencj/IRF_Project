@@ -12,7 +12,7 @@ namespace Beadando
 {
     public partial class Tagszerkeztes : _Form
     { 
-        IRF_databaseEntitiesuj context = new IRF_databaseEntitiesuj();
+        IRF_databaseEntitiesP context = new IRF_databaseEntitiesP();
         public Tagszerkeztes()
         {
             InitializeComponent();
@@ -43,13 +43,11 @@ namespace Beadando
         private void taghozzaadas()
         {
             Tag tag = new Tag();
-            //textBoxnev.Text, Convert.ToDateTime(textBoxszuletes.Text), textBoxcim.Text, DateTime.Now); 
-            // ez a születési dátum, de a belépésihez kell
 
             tag.Nev = textBoxnev.Text;
             tag.Szuletesi_datum = Convert.ToDateTime(textBoxszuletes.Text);
             tag.Cim = textBoxcim.Text;
-            tag.Belepesi_datum = Convert.ToDateTime(textBoxbelepes.Text);            
+            tag.Belepesi_datum = Convert.ToDateTime(textBoxbelepes.Text);
 
             bindingSource1.Add(tag);
 

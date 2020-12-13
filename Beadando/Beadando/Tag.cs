@@ -24,7 +24,7 @@ namespace Beadando
         public string Nev { get; set; }
         public System.DateTime Szuletesi_datum { get; set; }
         public string Cim { get; set; }
-        public System.DateTime Belepesi_datum  { get; set; }
+        public System.DateTime Belepesi_datum { get; set; }
         public Nullable<System.DateTime> Kilepesi_datum { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
