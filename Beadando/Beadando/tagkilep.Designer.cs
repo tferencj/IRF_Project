@@ -41,7 +41,7 @@
             this.Kilepesi_datum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBoxkilep = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.datumgomb1 = new Beadando.datumgomb();
+            this.datumgomb2 = new Beadando.datumgomb();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewkonyv)).BeginInit();
             this.SuspendLayout();
@@ -148,22 +148,23 @@
             this.label2.TabIndex = 33;
             this.label2.Text = "Kilépés dátuma";
             // 
-            // datumgomb1
+            // datumgomb2
             // 
-            this.datumgomb1._grid = this.dataGridViewkonyv;
-            this.datumgomb1.Location = new System.Drawing.Point(626, 169);
-            this.datumgomb1.Name = "datumgomb1";
-            this.datumgomb1.Size = new System.Drawing.Size(162, 78);
-            this.datumgomb1.TabIndex = 34;
-            this.datumgomb1.Text = "datumgomb1";
-            this.datumgomb1.UseVisualStyleBackColor = true;
+            this.datumgomb2._grid = this.dataGridViewkonyv;
+            this.datumgomb2.belepes = null;
+            this.datumgomb2.Location = new System.Drawing.Point(625, 155);
+            this.datumgomb2.Name = "datumgomb2";
+            this.datumgomb2.Size = new System.Drawing.Size(162, 92);
+            this.datumgomb2.TabIndex = 35;
+            this.datumgomb2.Text = "datumgomb2";
+            this.datumgomb2.UseVisualStyleBackColor = true;
             // 
             // tagkilep
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.datumgomb1);
+            this.Controls.Add(this.datumgomb2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxkilep);
             this.Controls.Add(this.dataGridViewkonyv);
@@ -172,6 +173,7 @@
             this.Controls.Add(this.label1);
             this.Name = "tagkilep";
             this.Text = "tagkilep";
+            this.Load += new System.EventHandler(this.tagkilep_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewkonyv)).EndInit();
             this.ResumeLayout(false);
@@ -192,6 +194,6 @@
         private System.Windows.Forms.TextBox textBoxkilep;
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.BindingSource bindingSource1;
-        private datumgomb datumgomb1;
+        private datumgomb datumgomb2;
     }
 }

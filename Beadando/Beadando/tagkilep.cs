@@ -37,5 +37,10 @@ namespace Beadando
         {
             context.SaveChanges();
         }
+
+        private void tagkilep_Load(object sender, EventArgs e)
+        {
+            //véletlen
+        }
     }
 }
