@@ -17,6 +17,13 @@ namespace Beadando
             InitializeComponent();
             Megsegomb megsebutton = new Megsegomb();
             Controls.Add(megsebutton);
+            megsebutton.Click += new System.EventHandler(this.buttonmegse_Click);
+        }
+        private void buttonmegse_Click(object sender, EventArgs e)
+        {
+            Form1 t = new Form1();
+            t.Show();
+            this.Close();
         }
     }
 }

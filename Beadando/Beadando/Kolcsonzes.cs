@@ -18,6 +18,7 @@ namespace Beadando
             InitializeComponent();
             taglistazas();
             konyvlistazas();
+            tablazat();
         }
 
         private void buttonmegse_Click(object sender, EventArgs e)
@@ -33,6 +34,17 @@ namespace Beadando
             k.Szemely_ID = ((Tag)listBoxtag.SelectedItem).tag_Id;
             k.Kivetel_datum = DateTime.Today;
 
+            bindingSource1.Add(k);
+            context.SaveChanges();
+        }
+        private void vissza()
+        {
+            dynamic v = bindingSource1.Current;
+            DateTime vissza = DateTime.Today;
+            vissza = v.Visszahozas_Datum;
+
+            bindingSource1.Add(v);
+            context.SaveChanges();
         }
 
         private void buttonhozzaad_Click(object sender, EventArgs e)
@@ -52,8 +64,26 @@ namespace Beadando
             var tag = from x in context.Tags
                       where x.Nev.Contains(textBoxtag.Text)
                       select x;
+
+            listBoxtag.DisplayMember = "Nev";
             listBoxtag.DataSource = tag.ToList();
-            listBoxkonyv.DisplayMember = "Nev";
+        }
+
+        private void tablazat()
+        {
+            var tg = from x in context.Konyvs
+                      join y in context.Kolcsonzes on x.Konyv_Id equals y.Konyv_ID
+                      join z in context.Tags on y.Szemely_ID equals z.tag_Id
+                      where x.Nev.Contains(textBoxkonyv.Text)
+                      select new
+                      {
+                          Könyv = x.Nev,
+                          Tag = z.Nev,
+                          Kivitel = y.Kivetel_datum
+                      };
+
+            bindingSource1.DataSource = tg.ToList();
+                      
         }
 
         private void textBoxkonyv_TextChanged(object sender, EventArgs e)
@@ -64,6 +94,16 @@ namespace Beadando
         private void textBoxtag_TextChanged(object sender, EventArgs e)
         {
             taglistazas();
+        }
+
+        private void listBoxkonyv_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            tablazat();
+        }
+
+        private void buttonvissza_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

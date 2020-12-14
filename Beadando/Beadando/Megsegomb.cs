@@ -26,8 +26,8 @@ namespace Beadando
         }
         private void buttonmegse_Click(object sender, EventArgs e)
         {
-            Form1 t = new Form1();
-            t.Show();
+            //Form1 t = new Form1();
+            //t.Show();
         }
     }
 }

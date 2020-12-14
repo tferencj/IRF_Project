@@ -38,8 +38,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.torolgomb1 = new Beadando.Torolgomb();
+            this.Konyv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tag = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Kivitel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.torolgomb1 = new Beadando.Torolgomb();
+            this.buttonvissza = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
@@ -81,6 +85,7 @@
             this.listBoxkonyv.Name = "listBoxkonyv";
             this.listBoxkonyv.Size = new System.Drawing.Size(245, 180);
             this.listBoxkonyv.TabIndex = 7;
+            this.listBoxkonyv.SelectedIndexChanged += new System.EventHandler(this.listBoxkonyv_SelectedIndexChanged);
             // 
             // listBoxtag
             // 
@@ -96,7 +101,7 @@
             // buttonhozzaad
             // 
             this.buttonhozzaad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonhozzaad.Location = new System.Drawing.Point(625, 150);
+            this.buttonhozzaad.Location = new System.Drawing.Point(624, 58);
             this.buttonhozzaad.Name = "buttonhozzaad";
             this.buttonhozzaad.Size = new System.Drawing.Size(163, 91);
             this.buttonhozzaad.TabIndex = 9;
@@ -126,6 +131,10 @@
             // 
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Konyv,
+            this.Tag,
+            this.Kivitel});
             this.dataGridView1.DataSource = this.bindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(23, 252);
             this.dataGridView1.Name = "dataGridView1";
@@ -133,6 +142,30 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(544, 185);
             this.dataGridView1.TabIndex = 12;
+            // 
+            // Konyv
+            // 
+            this.Konyv.DataPropertyName = "Nev";
+            this.Konyv.HeaderText = "Könyv";
+            this.Konyv.MinimumWidth = 6;
+            this.Konyv.Name = "Konyv";
+            this.Konyv.Width = 125;
+            // 
+            // Tag
+            // 
+            this.Tag.DataPropertyName = "Tag.Nev";
+            this.Tag.HeaderText = "Tag";
+            this.Tag.MinimumWidth = 6;
+            this.Tag.Name = "Tag";
+            this.Tag.Width = 125;
+            // 
+            // Kivitel
+            // 
+            this.Kivitel.DataPropertyName = "Kolcsonzes.Kivitel_datum";
+            this.Kivitel.HeaderText = "Kivitel";
+            this.Kivitel.MinimumWidth = 6;
+            this.Kivitel.Name = "Kivitel";
+            this.Kivitel.Width = 125;
             // 
             // torolgomb1
             // 
@@ -145,11 +178,23 @@
             this.torolgomb1.Text = "Töröl";
             this.torolgomb1.UseVisualStyleBackColor = true;
             // 
+            // buttonvissza
+            // 
+            this.buttonvissza.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonvissza.Location = new System.Drawing.Point(625, 155);
+            this.buttonvissza.Name = "buttonvissza";
+            this.buttonvissza.Size = new System.Drawing.Size(163, 91);
+            this.buttonvissza.TabIndex = 14;
+            this.buttonvissza.Text = "Visszahozás";
+            this.buttonvissza.UseVisualStyleBackColor = true;
+            this.buttonvissza.Click += new System.EventHandler(this.buttonvissza_Click);
+            // 
             // Kolcsonzes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonvissza);
             this.Controls.Add(this.torolgomb1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
@@ -182,5 +227,9 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource bindingSource1;
         private Torolgomb torolgomb1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Konyv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tag;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Kivitel;
+        private System.Windows.Forms.Button buttonvissza;
     }
 }
