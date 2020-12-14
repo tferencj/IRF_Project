@@ -12,7 +12,7 @@ namespace Beadando
 {
     public partial class Konyvadatok : _Form
     {
-        IRF_databaseEntitiesuj context = new IRF_databaseEntitiesuj();
+        IRF_databaseEntitiesP context = new IRF_databaseEntitiesP();
 
         public Konyvadatok()
         {
@@ -44,6 +44,13 @@ namespace Beadando
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             konyvlistazas();
+        }
+
+        private void buttondia_Click(object sender, EventArgs e)
+        {
+            Diagram d = new Diagram();
+            d.Show();
+            this.Close();
         }
     }
 }

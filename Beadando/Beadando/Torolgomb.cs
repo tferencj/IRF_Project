@@ -12,9 +12,9 @@ namespace Beadando
 {
     public partial class Torolgomb : Button
     {
+        IRF_databaseEntitiesP context = new IRF_databaseEntitiesP();
         public Torolgomb()
         {
-            this.Enabled = false;
             InitializeComponent();
             this.Text = "Töröl";
             this.Click += new System.EventHandler(this.buttontorol_Click);
@@ -29,6 +29,7 @@ namespace Beadando
                 {
                     _grid.Rows.RemoveAt(item.Index);
                 }
+                context.SaveChanges();
             }
         }
     }

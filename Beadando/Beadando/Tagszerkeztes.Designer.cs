@@ -47,8 +47,8 @@
             this.textBoxcim = new System.Windows.Forms.TextBox();
             this.textBoxbelepes = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.buttontorol = new System.Windows.Forms.Button();
             this.buttonkilep = new System.Windows.Forms.Button();
+            this.torolgomb1 = new Beadando.Torolgomb();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewkonyv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
@@ -204,17 +204,6 @@
             this.label5.TabIndex = 26;
             this.label5.Text = "Belépési dátum";
             // 
-            // buttontorol
-            // 
-            this.buttontorol.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttontorol.Location = new System.Drawing.Point(625, 153);
-            this.buttontorol.Name = "buttontorol";
-            this.buttontorol.Size = new System.Drawing.Size(163, 91);
-            this.buttontorol.TabIndex = 28;
-            this.buttontorol.Text = "Töröl";
-            this.buttontorol.UseVisualStyleBackColor = true;
-            this.buttontorol.Click += new System.EventHandler(this.buttontorol_Click);
-            // 
             // buttonkilep
             // 
             this.buttonkilep.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -226,13 +215,23 @@
             this.buttonkilep.UseVisualStyleBackColor = true;
             this.buttonkilep.Click += new System.EventHandler(this.buttonkilep_Click);
             // 
+            // torolgomb1
+            // 
+            this.torolgomb1._grid = this.dataGridViewkonyv;
+            this.torolgomb1.Location = new System.Drawing.Point(625, 153);
+            this.torolgomb1.Name = "torolgomb1";
+            this.torolgomb1.Size = new System.Drawing.Size(162, 90);
+            this.torolgomb1.TabIndex = 30;
+            this.torolgomb1.Text = "Töröl";
+            this.torolgomb1.UseVisualStyleBackColor = true;
+            // 
             // Tagszerkeztes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.torolgomb1);
             this.Controls.Add(this.buttonkilep);
-            this.Controls.Add(this.buttontorol);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBoxbelepes);
             this.Controls.Add(this.textBoxcim);
@@ -267,7 +266,6 @@
         private System.Windows.Forms.TextBox textBoxcim;
         private System.Windows.Forms.TextBox textBoxbelepes;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button buttontorol;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nev;
         private System.Windows.Forms.DataGridViewTextBoxColumn Szuletesi_datum;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cim;
@@ -275,5 +273,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Kilepesi_datum;
         private System.Windows.Forms.Button buttonkilep;
         public System.Windows.Forms.BindingSource bindingSource1;
+        private Torolgomb torolgomb1;
     }
 }

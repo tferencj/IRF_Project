@@ -40,6 +40,7 @@
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.buttondia = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewkonyv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
@@ -141,11 +142,23 @@
             this.textBox1.TabIndex = 11;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
+            // buttondia
+            // 
+            this.buttondia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttondia.Location = new System.Drawing.Point(625, 153);
+            this.buttondia.Name = "buttondia";
+            this.buttondia.Size = new System.Drawing.Size(163, 91);
+            this.buttondia.TabIndex = 12;
+            this.buttondia.Text = "Diagram";
+            this.buttondia.UseVisualStyleBackColor = true;
+            this.buttondia.Click += new System.EventHandler(this.buttondia_Click);
+            // 
             // Konyvadatok
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttondia);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridViewkonyv);
@@ -172,5 +185,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Kiado;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nyelv;
         private System.Windows.Forms.DataGridViewTextBoxColumn Oldalszam;
+        private System.Windows.Forms.Button buttondia;
     }
 }

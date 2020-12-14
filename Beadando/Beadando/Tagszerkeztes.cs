@@ -17,7 +17,6 @@ namespace Beadando
         {
             InitializeComponent();
             taglistazas();
-            buttontorol.Visible = false;
         }
 
         private void buttonmegse_Click(object sender, EventArgs e)
@@ -77,15 +76,12 @@ namespace Beadando
 
             if (dataGridViewkonyv.CurrentRow.Cells["Kilepesi_datum"].Value != null)
             {
-                buttontorol.Visible = true;
+                torolgomb1.Visible = true;
             }
             else
             {
-                buttontorol.Visible = false;
+                torolgomb1.Visible = false;
             }
-            
-            // törölgombot hozza fel, enable true-ra kell
-            // ha kölcsönzött már könyvet akkor ne lehessen törölni
         }
 
         private void buttonkilep_Click(object sender, EventArgs e)

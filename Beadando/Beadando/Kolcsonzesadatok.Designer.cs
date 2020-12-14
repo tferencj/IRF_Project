@@ -30,13 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             this.buttonkonyv = new System.Windows.Forms.Button();
-            this.buttondia = new System.Windows.Forms.Button();
             this.dataGridViewkonyv = new System.Windows.Forms.DataGridView();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.buttontorol = new System.Windows.Forms.Button();
             this.listBoxkonyv = new System.Windows.Forms.ListBox();
             this.listBoxtag = new System.Windows.Forms.ListBox();
@@ -54,16 +53,6 @@
             this.buttonkonyv.Text = "Hozzáadás";
             this.buttonkonyv.UseVisualStyleBackColor = true;
             this.buttonkonyv.Click += new System.EventHandler(this.buttonkonyv_Click);
-            // 
-            // buttondia
-            // 
-            this.buttondia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttondia.Location = new System.Drawing.Point(625, 48);
-            this.buttondia.Name = "buttondia";
-            this.buttondia.Size = new System.Drawing.Size(163, 91);
-            this.buttondia.TabIndex = 4;
-            this.buttondia.Text = "Diagram";
-            this.buttondia.UseVisualStyleBackColor = true;
             // 
             // dataGridViewkonyv
             // 
@@ -157,7 +146,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridViewkonyv);
-            this.Controls.Add(this.buttondia);
             this.Controls.Add(this.buttonkonyv);
             this.Name = "Kolcsonzesadatok";
             this.Text = "Kolcsonzesadatok";
@@ -171,7 +159,6 @@
         #endregion
 
         private System.Windows.Forms.Button buttonkonyv;
-        private System.Windows.Forms.Button buttondia;
         private System.Windows.Forms.DataGridView dataGridViewkonyv;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;

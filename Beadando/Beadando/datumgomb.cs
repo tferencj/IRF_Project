@@ -18,7 +18,7 @@ namespace Beadando
             {
                 _belepes = belepes;
                 //_belepes = _grid.CurrentRow.Cells[3].Value.ToString();
-                if (_grid.CurrentRow.Cells["Belepesi_datum"].Value != null)
+                if (_belepes != null)
                 {
                     this.Visible = true;
                     this.Text = "de van";

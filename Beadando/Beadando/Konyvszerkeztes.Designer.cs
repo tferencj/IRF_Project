@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.buttonveglegesit = new System.Windows.Forms.Button();
-            this.buttontorol = new System.Windows.Forms.Button();
             this.dataGridViewkonyv = new System.Windows.Forms.DataGridView();
             this.Nev = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Szerzo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,6 +52,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.torolgomb1 = new Beadando.Torolgomb();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewkonyv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
@@ -67,17 +67,6 @@
             this.buttonveglegesit.Text = "Véglegesít";
             this.buttonveglegesit.UseVisualStyleBackColor = true;
             this.buttonveglegesit.Click += new System.EventHandler(this.buttonveglegesit_Click);
-            // 
-            // buttontorol
-            // 
-            this.buttontorol.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttontorol.Location = new System.Drawing.Point(625, 153);
-            this.buttontorol.Name = "buttontorol";
-            this.buttontorol.Size = new System.Drawing.Size(163, 91);
-            this.buttontorol.TabIndex = 7;
-            this.buttontorol.Text = "Töröl";
-            this.buttontorol.UseVisualStyleBackColor = true;
-            this.buttontorol.Click += new System.EventHandler(this.buttontorol_Click);
             // 
             // dataGridViewkonyv
             // 
@@ -261,11 +250,22 @@
             this.label7.TabIndex = 23;
             this.label7.Text = "Oldalszám";
             // 
+            // torolgomb1
+            // 
+            this.torolgomb1._grid = this.dataGridViewkonyv;
+            this.torolgomb1.Location = new System.Drawing.Point(625, 161);
+            this.torolgomb1.Name = "torolgomb1";
+            this.torolgomb1.Size = new System.Drawing.Size(162, 82);
+            this.torolgomb1.TabIndex = 24;
+            this.torolgomb1.Text = "Töröl";
+            this.torolgomb1.UseVisualStyleBackColor = true;
+            // 
             // Konyvszerkeztes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.torolgomb1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -281,7 +281,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridViewkonyv);
-            this.Controls.Add(this.buttontorol);
             this.Controls.Add(this.buttonveglegesit);
             this.Name = "Konyvszerkeztes";
             this.Text = "Konyvszerkeztes";
@@ -294,7 +293,6 @@
 
         #endregion
         private System.Windows.Forms.Button buttonveglegesit;
-        private System.Windows.Forms.Button buttontorol;
         private System.Windows.Forms.DataGridView dataGridViewkonyv;
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.TextBox textBox1;
@@ -317,5 +315,6 @@
         public System.Windows.Forms.TextBox textBoxkiado;
         public System.Windows.Forms.TextBox textBoxnyelv;
         public System.Windows.Forms.TextBox textBoxoldalszam;
+        private Torolgomb torolgomb1;
     }
 }

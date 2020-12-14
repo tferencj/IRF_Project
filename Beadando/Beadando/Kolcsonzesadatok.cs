@@ -12,7 +12,7 @@ namespace Beadando
 {
     public partial class Kolcsonzesadatok : _Form
     {
-        IRF_databaseEntitiesuj context = new IRF_databaseEntitiesuj();
+        IRF_databaseEntitiesP context = new IRF_databaseEntitiesP();
 
         public Kolcsonzesadatok()
         {
