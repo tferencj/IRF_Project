@@ -4,3 +4,4 @@ Egy alap tábla lesz a könyvekről szóló információkra, lesz egy ahol a tag
 Létrehoztam a 3 plusz osztályt, az egyikben a törlés funkciót valósítom meg, a másikban a visszalépés funkciót "mégse" gombot amit létrehoztam kódból,
 a harmadik pedig egy alap form, amire a jobb alsó sarokba ráhelyeztem a mégse gombot.
 Továbbá a könyvek és tagok hozzáadása kész.
+8-as Commitnál véletlenül egy régi projektemet pusholtam a main branchre. Ezért létrehozok egy megoldás branchet, ahol csak az eredeti projekt fog szerepelni.
