@@ -24,5 +24,32 @@ namespace Beadando
             bindingSource1.DataSource = c.ToList();
             chart1.DataBind();
         }
+
+        private void buttonoldal_Click(object sender, EventArgs e)
+        {
+            var c = (from x in context.Konyvs
+                     group x by x.Oldalszam into n
+                     select new { Nyelv = n.Key, db = n.Count() }).Distinct();
+            bindingSource1.DataSource = c.ToList();
+            chart1.DataBind();
+        }
+
+        private void buttonkiadas_Click(object sender, EventArgs e)
+        {
+            var c = (from x in context.Konyvs
+                     group x by x.Kiadas_datum into n
+                     select new { Nyelv = n.Key, db = n.Count() }).Distinct();
+            bindingSource1.DataSource = c.ToList();
+            chart1.DataBind();
+        }
+
+        private void buttonnyelv_Click(object sender, EventArgs e)
+        {
+            var c = (from x in context.Konyvs
+                     group x by x.Nyelv into n
+                     select new { Nyelv = n.Key, db = n.Count() }).Distinct();
+            bindingSource1.DataSource = c.ToList();
+            chart1.DataBind();
+        }
     }
 }
