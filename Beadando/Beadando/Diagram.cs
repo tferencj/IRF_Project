@@ -24,5 +24,15 @@ namespace Beadando
             bindingSource1.DataSource = c.ToList();
             chart1.DataBind();
         }
+
+        private void buttonoldal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonkiadas_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
