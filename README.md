@@ -5,3 +5,4 @@ Létrehoztam a 3 plusz osztályt, az egyikben a törlés funkciót valósítom m
 a harmadik pedig egy alap form, amire a jobb alsó sarokba ráhelyeztem a mégse gombot.
 Továbbá a könyvek és tagok hozzáadása kész.
 8-as Commitnál véletlenül egy régi projektemet pusholtam a main branchre. Ezért létrehozok egy megoldás branchet, ahol csak az eredeti projekt fog szerepelni.
+Nekem ha elindítom a programot, csak az eredeti megoldások vannak ott, remélem ez így lesz Önöknél is. Úgy látom, hogy lehet mégsem töltöttem fel a rosszat.
