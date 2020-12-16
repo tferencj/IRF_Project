@@ -151,39 +151,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Modelproba.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Modelsok.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Modelsok.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modelsok.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Modelsok.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modelsok.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Modelsok.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Modeluj.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Modeluj.Context.tt</DependentUpon>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
-    <Compile Include="Modeluj.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Modeluj.tt</DependentUpon>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
-    <Compile Include="Modeluj.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Modeluj.edmx</DependentUpon>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tag.cs">
@@ -256,28 +223,12 @@
     <EmbeddedResource Include="Tagszerkeztes.resx">
       <DependentUpon>Tagszerkeztes.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="Modeluj.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Modeluj.Designer.cs</LastGenOutput>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EntityDeploy>
-    <EntityDeploy Include="Modelsok.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Modelsok.Designer.cs</LastGenOutput>
-    </EntityDeploy>
     <EntityDeploy Include="Modelproba.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Modelproba.Designer.cs</LastGenOutput>
     </EntityDeploy>
     <None Include="Modelproba.edmx.diagram">
       <DependentUpon>Modelproba.edmx</DependentUpon>
-    </None>
-    <None Include="Modelsok.edmx.diagram">
-      <DependentUpon>Modelsok.edmx</DependentUpon>
-    </None>
-    <None Include="Modeluj.edmx.diagram">
-      <DependentUpon>Modeluj.edmx</DependentUpon>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -310,28 +261,6 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Modelproba.edmx</DependentUpon>
       <LastGenOutput>Modelproba.cs</LastGenOutput>
-    </Content>
-    <Content Include="Modelsok.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Modelsok.edmx</DependentUpon>
-      <LastGenOutput>Modelsok.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Modelsok.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Modelsok.edmx</DependentUpon>
-      <LastGenOutput>Modelsok.cs</LastGenOutput>
-    </Content>
-    <Content Include="Modeluj.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Modeluj.edmx</DependentUpon>
-      <LastGenOutput>Modeluj.Context.cs</LastGenOutput>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Modeluj.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Modeluj.edmx</DependentUpon>
-      <LastGenOutput>Modeluj.cs</LastGenOutput>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>

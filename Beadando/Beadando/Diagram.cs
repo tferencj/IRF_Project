@@ -18,6 +18,7 @@ namespace Beadando
         public Diagram()
         {
             InitializeComponent();
+
             var c = (from x in context.Konyvs
                      group x by x.Nyelv into n
                      select new { Nyelv = n.Key, db = n.Count() }).Distinct();
