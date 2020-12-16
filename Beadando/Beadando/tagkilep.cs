@@ -35,7 +35,15 @@ namespace Beadando
 
         private void buttonkilep_Click(object sender, EventArgs e)
         {
-            context.SaveChanges();
+            if (dataGridViewkonyv.CurrentRow.Cells["Kilepesi_datum"].Value != null)
+            {
+                dataGridViewkonyv.CurrentRow.Cells["Kilepesi_datum"].Value = DateTime.Today;
+                context.SaveChanges();
+            }
+            else
+            {
+                MessageBox.Show("A tagot már kiléptették");
+            }
         }
 
         private void tagkilep_Load(object sender, EventArgs e)

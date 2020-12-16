@@ -39,12 +39,7 @@ namespace Beadando
         }
         private void vissza()
         {
-            dynamic v = bindingSource1.Current;
-            DateTime vissza = DateTime.Today;
-            vissza = v.Visszahozas_Datum;
 
-            bindingSource1.Add(v);
-            context.SaveChanges();
         }
 
         private void buttonhozzaad_Click(object sender, EventArgs e)

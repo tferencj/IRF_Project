@@ -17,15 +17,13 @@ namespace Beadando
             set
             {
                 _belepes = belepes;
-                //_belepes = _grid.CurrentRow.Cells[3].Value.ToString();
+                //_belepes = _grid.CurrentRow.Cells["Kilepesi_datum"].Value.ToString();
                 if (_belepes != null)
-                {
-                    this.Visible = true;
+                {                    
                     this.Text = "de van";
                 }
                 else
                 {
-                    this.Visible = false;
                     this.Text = "nincs";
                 }
             }
