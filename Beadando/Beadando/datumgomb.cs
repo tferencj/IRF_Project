@@ -19,12 +19,12 @@ namespace Beadando
                 _belepes = belepes;
                 //_belepes = _grid.CurrentRow.Cells["Kilepesi_datum"].Value.ToString();
                 if (_belepes != null)
-                {                    
-                    this.Text = "de van";
+                {
+                    //próbálkozás
                 }
                 else
                 {
-                    this.Text = "nincs";
+
                 }
             }
         }
