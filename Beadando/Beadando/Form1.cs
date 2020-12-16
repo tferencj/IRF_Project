@@ -21,14 +21,14 @@ namespace Beadando
         {
             Tagadatok t = new Tagadatok();
             t.Show();
-            //this.Hide();
+            this.Hide();
         }
 
         private void buttonkonyv_Click(object sender, EventArgs e)
         {
             Konyvadatok k = new Konyvadatok();
             k.Show();
-            //this.Hide();
+            this.Hide();
         }
 
         private void Buttonbezar_Click(object sender, EventArgs e)
@@ -40,7 +40,7 @@ namespace Beadando
         {
             Kolcsonzesadatok k = new Kolcsonzesadatok();
             k.Show();
-            //this.Hide();
+            this.Hide();
         }
     }
 }

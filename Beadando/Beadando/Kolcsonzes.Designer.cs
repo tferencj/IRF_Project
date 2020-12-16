@@ -170,7 +170,6 @@
             // torolgomb1
             // 
             this.torolgomb1._grid = this.dataGridView1;
-            this.torolgomb1.Enabled = false;
             this.torolgomb1.Location = new System.Drawing.Point(625, 252);
             this.torolgomb1.Name = "torolgomb1";
             this.torolgomb1.Size = new System.Drawing.Size(162, 89);

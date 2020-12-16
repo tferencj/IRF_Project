@@ -37,12 +37,56 @@ namespace Beadando
         private void konyvhozzaadas()
         {
             Konyv konyv = new Konyv();
-            konyv.Nev = textBoxnev.Text;
-            konyv.Szerzo = textBoxszerzo.Text;
-            konyv.Kiadas_datum = Convert.ToInt32(textBoxdatum.Text);
-            konyv.Kiado = textBoxkiado.Text;
-            konyv.Nyelv = textBoxnyelv.Text;
-            konyv.Oldalszam = Convert.ToInt32(textBoxoldalszam.Text);
+            if (textBoxnev.Text == "")
+            {
+                MessageBox.Show("A név mező nem lehet üres");
+            }
+            else
+            {
+                konyv.Nev = textBoxnev.Text;
+            }
+            if (textBoxdatum.Text == "")
+            {
+                MessageBox.Show("A kiadás dátuma mező nem lehet üres");
+            }
+            else
+            {
+                konyv.Kiadas_datum = Convert.ToInt32(textBoxdatum.Text);
+            }
+            if (textBoxszerzo.Text == "")
+            {
+                MessageBox.Show("A szerző mező nem lehet üres");
+            }
+            else
+            {
+                konyv.Szerzo = textBoxszerzo.Text;
+            }
+            if (textBoxkiado.Text == "")
+            {
+                MessageBox.Show("A kiadó mező nem lehet üres");
+            }
+            else
+            {
+                konyv.Kiado = textBoxkiado.Text;
+            }
+            if (textBoxnyelv.Text == "")
+            {
+                MessageBox.Show("A nyelv mező nem lehet üres");
+            }
+            else
+            {
+                konyv.Nyelv = textBoxnyelv.Text;
+            }
+            if (textBoxoldalszam.Text == "")
+            {
+                MessageBox.Show("Az oldalszám mező nem lehet üres");
+            }
+            else
+            {
+                konyv.Oldalszam = Convert.ToInt32(textBoxoldalszam.Text);
+            }
+
+            bindingSource1.EndEdit();
 
             bindingSource1.Add(konyv);
 

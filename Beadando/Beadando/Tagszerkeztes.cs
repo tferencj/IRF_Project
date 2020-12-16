@@ -42,11 +42,40 @@ namespace Beadando
         private void taghozzaadas()
         {
             Tag tag = new Tag();
-
-            tag.Nev = textBoxnev.Text;
-            tag.Szuletesi_datum = Convert.ToDateTime(textBoxszuletes.Text);
-            tag.Cim = textBoxcim.Text;
-            tag.Belepesi_datum = Convert.ToDateTime(textBoxbelepes.Text);
+            if (textBoxnev.Text=="")
+            {
+                MessageBox.Show("A név mező nem lehet üres");
+            }
+            else
+            {
+                tag.Nev = textBoxnev.Text;
+            }
+            if (textBoxcim.Text == "")
+            {
+                MessageBox.Show("A cím mező nem lehet üres");
+            }
+            else
+            {
+                tag.Szuletesi_datum = Convert.ToDateTime(textBoxszuletes.Text);
+            }
+            if (textBoxszuletes.Text == "")
+            {
+                MessageBox.Show("A születési dátum mező nem lehet üres");
+            }
+            else
+            {
+                tag.Cim = textBoxcim.Text;
+            }
+            if (textBoxbelepes.Text == "")
+            {
+                MessageBox.Show("A belépési dátum mező nem lehet üres");
+            }
+            else
+            {
+                tag.Belepesi_datum = Convert.ToDateTime(textBoxbelepes.Text);
+            }
+            
+            bindingSource1.EndEdit();             
 
             bindingSource1.Add(tag);
 
