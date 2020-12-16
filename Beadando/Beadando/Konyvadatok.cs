@@ -38,6 +38,7 @@ namespace Beadando
             var k = from x in context.Konyvs
                     where x.Nev.Contains(textBox1.Text)
                     select x;
+
             bindingSource1.DataSource = k.ToList();
         }
 

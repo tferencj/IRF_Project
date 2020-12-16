@@ -30,6 +30,7 @@ namespace Beadando
         private void hozzaad()
         {
             Kolcsonze k = new Kolcsonze();
+
             k.Konyv_ID = ((Konyv)listBoxkonyv.SelectedItem).Konyv_Id;
             k.Szemely_ID = ((Tag)listBoxtag.SelectedItem).tag_Id;
             k.Kivetel_datum = DateTime.Today;

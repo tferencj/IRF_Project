@@ -18,6 +18,7 @@ namespace Beadando
             InitializeComponent();
             this.Text = "Töröl";
             this.Click += new System.EventHandler(this.buttontorol_Click);
+            this.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
         }
         public DataGridView _grid { get; set; }
 

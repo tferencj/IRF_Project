@@ -23,6 +23,8 @@ namespace Beadando
                      select new { Nyelv = n.Key, db = n.Count() }).Distinct();
             bindingSource1.DataSource = c.ToList();
             chart1.DataBind();
+
+            bindingSource2.DataSource = c.ToList();
         }
 
         private void buttonoldal_Click(object sender, EventArgs e)
@@ -32,6 +34,8 @@ namespace Beadando
                      select new { Nyelv = n.Key, db = n.Count() }).Distinct();
             bindingSource1.DataSource = c.ToList();
             chart1.DataBind();
+
+            bindingSource2.DataSource = c.ToList();
         }
 
         private void buttonkiadas_Click(object sender, EventArgs e)
@@ -41,6 +45,8 @@ namespace Beadando
                      select new { Nyelv = n.Key, db = n.Count() }).Distinct();
             bindingSource1.DataSource = c.ToList();
             chart1.DataBind();
+
+            bindingSource2.DataSource = c.ToList();
         }
 
         private void buttonnyelv_Click(object sender, EventArgs e)
@@ -50,6 +56,8 @@ namespace Beadando
                      select new { Nyelv = n.Key, db = n.Count() }).Distinct();
             bindingSource1.DataSource = c.ToList();
             chart1.DataBind();
+
+            bindingSource2.DataSource = c.ToList();
         }
     }
 }
